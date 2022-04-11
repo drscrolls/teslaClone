@@ -6,7 +6,7 @@ import styles from './styles';
 const StyledButton = ({type, content, onPress}) => {
 
   // console.log("type", type);
-  const bgColor = type == "primary" ? "#171A20CC" : "#FFFFFFE9";
+  const bgColor = type == "primary" ? "#171A20CC" : "#FFFFFFA1";
   const textColor = type == "primary" ? "#FFFFFF" : "#171A20";
 
   return (
