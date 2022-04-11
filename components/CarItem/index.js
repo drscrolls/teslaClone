@@ -4,13 +4,13 @@ import StyledButton from '../StyledButton'
 import styles from './styles';
 
 
-const CarItem = ({name, tagline, taglineCTA, image}) => {
+const CarItem = ({car}, key) => {
 
-    // console.warn("image = ", image);
+    const {name, tagline, taglineCTA, image} = car;
 
     
     return (
-        <View style={styles.carContainer}>
+        <View key={key} style={styles.carContainer}>
             <ImageBackground
                 style={styles.image}
                 source={image} />
@@ -18,7 +18,7 @@ const CarItem = ({name, tagline, taglineCTA, image}) => {
             <View style={styles.titles}>
                 <Text style={styles.title}>{name}</Text>
                 <Text style={styles.subtitle}>
-                    {tagline}
+                    {tagline}&nbsp;
                     <Text style={styles.subtitleCTA}>{taglineCTA}</Text>
                 </Text>
 
